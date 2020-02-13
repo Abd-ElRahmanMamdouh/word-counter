@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="text-center">{{ content }}</h1>
+      <div class="text-center">
+        <h1>There are {{ count }} words in your text</h1>
+        <a class="btn btn-info" href="{% url 'home' %}">Start Again</a>
+      </div>
+      <h1>Your Text : </h1>
+      {{ fulltext }} <br>
+      <h1>Analytics : </h1>
+      {% for word, counttotal in sortedwords %}
+        <p> the word <span class="sp1">'{{ word }}'</span> was repeated <span class="sp2">{{ counttotal }}</span> times </p>
+      {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <h1 class="text-center">{{ content }} <i class="fas fa-address-card"></i></h1>
+
+  <p>this is some dummy website to count words and analysing them</p>
+  <p>so lets count words! <a href="{% url 'home' %}">NOW!</a></p>
+</div>
+{% endblock %}
